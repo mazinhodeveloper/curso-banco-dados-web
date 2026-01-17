@@ -29,7 +29,7 @@ https://github.com/mazinhodeveloper/curso-banco-dados-web
 ### Projeto   
 | Requisitos do Projeto      | URL                           |   
 |--------------------------- | ----------------------------- |   
-| PHP 8.4 ou maior           | https://www.php.net           |   
+| PHP 8.5 ou maior           | https://www.php.net           |   
 | XAMPP                      | https://www.apachefriends.org |   
 | Docker                     | https://www.docker.com        |   
 | Docker PHP 8.5 Apache      | docker run -d -p 80:80 --name apache-php85-app -v "$PWD":/var/www/html php:8.5-apache |   
