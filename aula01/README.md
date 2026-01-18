@@ -49,7 +49,7 @@ Atividades desenvolvidas em sala de aula.
   DROP DATABASE escola;
   SHOW DATABASES;   
 
-### Utilizades
+### Utilidades
 - https://viacep.com.br    
   https://viacep.com.br/ws/01001000/json/    
   
