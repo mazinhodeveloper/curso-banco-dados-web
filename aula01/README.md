@@ -50,6 +50,6 @@ Atividades desenvolvidas em sala de aula.
   SHOW DATABASES;   
 
 ### Utilidades
-- https://viacep.com.br    
-  https://viacep.com.br/ws/01001000/json/    
+- https://viacep.com.br   
+- https://viacep.com.br/ws/01001000/json/    
   
