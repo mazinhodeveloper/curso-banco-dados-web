@@ -64,8 +64,8 @@ Atividades desenvolvidas em sala de aula.
   SELECT * FROM produtos;    
   INSERT INTO `produtos` (`id_produto`, `descricao_produto`, `id_categoria`, `observacao`, `preco_compra`, `preco_venda`, `estoque_minimo`, `estoque_maximo`) VALUES (NULL, 'Note book da Xuxa', NULL, 'tdsfdfsdfds', '0.00', '0.00', '0.00', '0.00');    
   ALTER TABLE `produtos` ADD `oculto` BOOLEAN NOT NULL DEFAULT FALSE AFTER `estoque_maximo`, ADD `id_usuario_deletou` INT(11) NOT NULL AFTER `oculto`, ADD `data_excusao` INT(11) NOT NULL AFTER `id_usuario_deletou`;    
+  ALTER TABLE `produtos` CHANGE `data_excusao` `data_excusao` DATE NULL DEFAULT NULL;    
+  UPDATE `produtos` SET `oculto` = '1' WHERE `produtos`.`id_produto` = 4;    
+  SELECT descricao_produto,descricao_categoria FROM produtos join categorias on produtos.id_categoria=categorias.id_categoria;    
   
-
-
-
   
