@@ -27,50 +27,66 @@ https://github.com/mazinhodeveloper/curso-banco-dados-web
 Atividades desenvolvidas em sala de aula.    
 - Usando PHPMyAdmin    
   CREATE DATABASE weberp;    
-  SHOW DATABASES;    
+  SHOW DATABASES;  
+  
   USE weberp;    
-  CREATE TABLE produtos (
-    id_produto INT AUTO_INCREMENT PRIMARY KEY, 
-    descricao_produto VARCHAR(70) NOT NULL,
-    id_categoria INT,
-    observacao TEXT
+  CREATE TABLE produtos (    
+    id_produto INT AUTO_INCREMENT PRIMARY KEY,    
+    descricao_produto VARCHAR(70) NOT NULL,    
+    id_categoria INT,    
+    observacao TEXT    
   ) ENGINE=INNODB;   
-  CREATE TABLE produtos (
-    id_produto INT AUTO_INCREMENT PRIMARY KEY, 
-    descricao_produto VARCHAR(70) NOT NULL,
-    id_categoria INT,
-    observacao TEXT, 
-    preco_compra DECIMAL(12,2) NOT NULL DEFAULT 0.00, 
-    estoque_minimo DECIMAL(10,2) NOT NULL DEFAULT 0.00,
-    estoque_maximo DECIMAL(10,2) NOT NULL DEFAULT 0.00
-  ) ENGINE=INNODB;   
-  ALTER TABLE produtos 
-  ADD CONSTRAINT fk_produtos_categorias 
-  FOREIGN KEY (id_categoria) 
-  REFERENCES categorias(id_categoria);   
-  INSERT INTO `categorias` (`id_categoria`, `descricao_categoria`) VALUES (NULL, 'Impressoras');    
+  -- Estrutura para tabela `produtos`    
+  CREATE TABLE produtos (    
+    id_produto INT AUTO_INCREMENT PRIMARY KEY,     
+    descricao_produto VARCHAR(70) NOT NULL,    
+    id_categoria INT,    
+    observacao TEXT,     
+    preco_compra DECIMAL(12,2) NOT NULL DEFAULT 0.00,     
+    estoque_minimo DECIMAL(10,2) NOT NULL DEFAULT 0.00,    
+    estoque_maximo DECIMAL(10,2) NOT NULL DEFAULT 0.00    
+  ) ENGINE=INNODB;    
+
+  ALTER TABLE produtos     
+  ADD CONSTRAINT fk_produtos_categorias    
+  FOREIGN KEY (id_categoria)    
+  REFERENCES categorias(id_categoria);    
+  INSERT INTO `categorias` (    
+    `id_categoria`, `descricao_categoria`) VALUES     
+    (NULL, 'Impressoras');    
   INSERT INTO categorias (descricao_categoria) VALUES ('Notebooks');    
-  INSERT INTO `produtos` (`id_produto`, `descricao_produto`, `id_categoria`, `observacao`, `preco_compra`, `estoque_minimo`, `estoque_maximo`) VALUES (NULL, 'Notebook Sansumg Mod. 2345', '2', 'I7 com 64GB Ram, 2TB SSD, etc.', '5000', '2', '20');   
+
+  INSERT INTO `produtos` (`id_produto`, `descricao_produto`, `id_categoria`, `observacao`, `preco_compra`, `estoque_minimo`, `estoque_maximo`) VALUES (NULL, 'Notebook Sansumg Mod. 2345', '2', 'I7 com 64GB Ram, 2TB SSD, etc.', '5000', '2', '20');    
+
   INSERT INTO produtos (descricao_produto, id_categoria, observacao, preco_compra, estoque_minimo, estoque_maximo) VALUES ('Impressora Laser Mod. 123', '1', 'Impressora Rápida', '3000', '1', '10');    
+
   ALTER TABLE `produtos` CHANGE `preco_venda` `preco_venda` DECIMAL(12,2) NOT NULL DEFAULT '0.00';    
   SELECT descricao_produto,preco_compra from produtos;   
   SELECT descricao_produto,preco_compra,preco_compra*1.60 as preco_sugerido from produtos;    
-  UPDATE produtos SET preco_venda = preco_compra*1.6;   
+  UPDATE produtos SET preco_venda = preco_compra*1.6;    
+
   SELECT * FROM produtos;    
   UPDATE produtos SET descricao_produto = 'Impressora Laser Mod. 125' WHERE id_produto=2;   
   INSERT INTO `produtos` (`id_produto`, `descricao_produto`, `id_categoria`, `observacao`, `preco_compra`, `preco_venda`, `estoque_minimo`, `estoque_maximo`) VALUES (NULL, 'Computador 1234', '2', 'Computador 1234', '100', '0.00', '0.00', '0.00');    
+
   SELECT * FROM produtos;    
   DELETE FROM produtos WHERE id_produto=3;    
   SELECT * FROM produtos;    
   INSERT INTO `produtos` (`id_produto`, `descricao_produto`, `id_categoria`, `observacao`, `preco_compra`, `preco_venda`, `estoque_minimo`, `estoque_maximo`) VALUES (NULL, 'Note book da Xuxa', NULL, 'tdsfdfsdfds', '0.00', '0.00', '0.00', '0.00');    
+
   ALTER TABLE `produtos` ADD `oculto` BOOLEAN NOT NULL DEFAULT FALSE AFTER `estoque_maximo`, ADD `id_usuario_deletou` INT(11) NOT NULL AFTER `oculto`, ADD `data_excusao` INT(11) NOT NULL AFTER `id_usuario_deletou`;    
   ALTER TABLE `produtos` CHANGE `data_excusao` `data_excusao` DATE NULL DEFAULT NULL;    
   UPDATE `produtos` SET `oculto` = '1' WHERE `produtos`.`id_produto` = 4;    
-  SELECT descricao_produto,descricao_categoria FROM produtos join categorias on produtos.id_categoria=categorias.id_categoria;   
+
+  SELECT descricao_produto,descricao_categoria FROM produtos join categorias on produtos.id_categoria=categorias.id_categoria;    
+
   --------     
   SELECT COUNT(id_produto) as total FROM produtos;    
-  SELECT SUM(preco_compra) as total FROM produtos;    
+
+  SELECT SUM(preco_compra) as total FROM produtos;   
+
   --------     
+
 
 ### Atividades 2
 Atividades desenvolvidas em sala de aula.    
