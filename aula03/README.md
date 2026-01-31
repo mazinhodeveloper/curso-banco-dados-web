@@ -27,7 +27,7 @@ https://github.com/mazinhodeveloper/curso-banco-dados-web
 Atividades desenvolvidas em sala de aula.    
 - Usando PHPMyAdmin    
   CREATE DATABASE weberp;    
-  SHOW DATABASES;  
+  SHOW DATABASES;    
   USE weberp;    
   CREATE TABLE produtos (
     id_produto INT AUTO_INCREMENT PRIMARY KEY, 
