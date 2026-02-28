@@ -96,6 +96,35 @@ CREATE TABLE pedido_item (
 );    
 SELECT * FROM pedido_item;     
 
+CREATE TABLE mov_estoque (     
+    id_mov INT AUTO_INCREMENT PRIMARY KEY,   
+    id_produto INT NOT NULL,    
+    id_usuario INT NOT NULL,   
+    tipo ENUM('ENTRADA', 'SAIDA') NOT NULL,    
+    origin ENUM('VENDA', 'COMPRA', 'AJUSTES') NOT NULL,    
+    data_mov DATETIME NOT NULL DEFAULT CURRENT_TIME,   
+    quantidade INT NOT NULL,   
+    custo_unitario  DECIMAL(12,2) NOT NULL DEFAULT 0.00,    
+    observacao VARCHAR(150) NULL,    
+    CONSTRAINT fk_mov_produto    
+    FOREIGN KEY (id_produto) REFERENCES produto(id_produto)    
+    ON UPDATE CASCADE    
+    ON DELETE RESTRICT,   
+    CONSTRAINT fk_mov_usuario    
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)    
+    ON UPDATE CASCADE    
+    ON DELETE RESTRICT      
+);     
+SELECT * FROM mov_estoque;     
 
+CREATE TABLE plano_contas (
+    id_plano INT AUTO_INCREMENT PRIMARY KEY,    
+    nome VARCHAR(80),   
+    tipo ENUM('RECEITA', 'DESPESA') NOT NULL,   
+    ativo TINYINT(1) NOT NULL DEFAULT 1   
+);    
+SELECT * FROM plano_contas;    
 
+INSERT INTO plano_contas (nome, tipo, ativo) VALUES ('Vendas no balcão', 'RECEITA', '1');     
+INSERT INTO plano_contas (nome, tipo, ativo) VALUES ('Compra de produtos', 'DESPESA', '1');   
 
