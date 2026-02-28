@@ -102,7 +102,7 @@ CREATE TABLE mov_estoque (
     id_usuario INT NOT NULL,   
     tipo ENUM('ENTRADA', 'SAIDA') NOT NULL,    
     origin ENUM('VENDA', 'COMPRA', 'AJUSTES') NOT NULL,    
-    data_mov DATETIME NOT NULL DEFAULT CURRENT_TIME,   
+    data_mov DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,   
     quantidade INT NOT NULL,   
     custo_unitario  DECIMAL(12,2) NOT NULL DEFAULT 0.00,    
     observacao VARCHAR(150) NULL,    
