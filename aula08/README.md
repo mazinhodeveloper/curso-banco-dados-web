@@ -116,7 +116,7 @@ Exemplos:
 
 ### Functions - Funções     
 - Conjunto de códigos mais complexos para ser executado em um select.     
-- Exemplo: Criar riar uma função para reajustar preços em uma tabela.     
+- Exemplo: Criar uma função para reajustar preços em uma tabela.     
 
 #### Recomandações   
 https://dev.mysql.com/doc     
