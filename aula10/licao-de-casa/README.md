@@ -1,7 +1,10 @@
 > Aula 10 - Lição de Casa     
 > Docente: Celso Luis Caldeira     
 > Data: 04/04/2026     
-        
+       
+# Banco de Dados para Web - 84 horas  
+Aprender a aplicar e manipular dados em um sistema gerenciador de banco de dados, conectando com a linguagem de programação.       
+               
 ## Variáveis no banco de dados       
 Variáveis no banco de dados Variável: Em programação uma variável é um espaço na memória que contem um nome e um valor.       
 Ex:          
@@ -106,7 +109,7 @@ CALL calcular_imc_param(90, 1.70);
 CALL calcular_imc_param(100, 1.70);        
        
 #### Resultados esperado     
-resultado_imc_param       
+resultado_imc_param        
 27.68      
 31.14        
 34.60          
@@ -141,4 +144,77 @@ SELECT fn_imc(80, 1.70) AS imc;
 imc       
 27.68         
        
-      
+       
+## Criando uma função para cálculo do IMC calcular_imc():             
+No select informar altura e peso.        
+A função vai efetuar a fórmula: peso / (altura * altura)                
+                  
+Exemplo:             
+SELECT fn_imc(80, 1.70) AS imc.         
+Irá retornar seu índice de massa corporal              
+   
+### Exemplo de criação da função calcular_imc()       
+imc = peso / (altura * altura)            
+         
+DELIMITER $$             
+        
+CREATE FUNCTION calcular_imc(peso DECIMAL(5,2), altura DECIMAL(4,2))         
+RETURNS DECIMAL(5,2)         
+DETERMINISTIC         
+BEGIN         
+	DECLARE imc DECIMAL(5,2);         
+    SET imc = peso / (altura * altura);         
+    RETURN imc;         
+END$$        
+        
+DELIMITER ;             
+               
+#### Executar SELECT                 
+SELECT calcular_imc(98, 1.75) AS classificação;                     
+         
+#### Resultado esperado    
+classificação       
+32.00           
+        
+        
+### Criando outra função e executando a função classificar_imc()         
+DELIMITER $$        
+         
+CREATE FUNCTION classificar_imc(peso DECIMAL(5,2), altura DECIMAL(4,2))        
+RETURNS VARCHAR(20)        
+DETERMINISTIC        
+BEGIN        
+	DECLARE imc DECIMAL(5,2);        
+    DECLARE classificacao VARCHAR(20);        
+    SET imc = peso / (altura * altura);        
+    IF imc < 18.5 THEN        
+    	SET classificacao = 'Abaixo do Peso';        
+    ELSEIF imc >= 18.5 AND imc < 25 THEN        
+    	SET classificacao = 'Peso Normal';        
+    ELSEIF imc >= 25 AND imc < 30 THEN        
+    	SET classificacao = 'Sobrepeso';        
+    ELSE        
+        SET classificacao = 'Obesidade';        
+    END IF;        
+    RETURN classificacao;        
+END$$        
+         
+DELIMITER ;        
+        
+#### Executar SELECT           
+SELECT classificar_imc(59, 1.87) AS classificacao;              
+SELECT classificar_imc(68, 1.74) AS classificacao;                   
+SELECT classificar_imc(77, 1.72) AS classificacao;                 
+SELECT classificar_imc(98, 1.75) AS classificacao;                    
+       
+#### Resultados esperado     
+Abaixo do Peso      
+Peso Normal        
+Sobrepeso             
+Obesidade               
+        
+    
+#### Lição de casa (Arquivos)           
+- variaveis.sql     
+- licao-de-casa.sql      
+- licao-de-casa-professor.sql     

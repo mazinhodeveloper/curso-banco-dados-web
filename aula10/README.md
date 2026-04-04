@@ -316,9 +316,10 @@ UPDATE cliente SET nome_razao='Serviços Nacional do Comercio',email='contato@se
 SELECT * FROM auditoria_log;      
 SELECT * FROM cliente;               
        
-### Lição de casa (Diretório)     
-- licao-de-casa.sql     
-- variaveis.sql      
+### Lição de casa (Diretório)      
+- variaveis.sql     
+- licao-de-casa.sql      
+- licao-de-casa-professor.sql     
        
 ### Material (Diretório)     
 - eletrocenter.sql      
