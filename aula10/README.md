@@ -316,11 +316,14 @@ UPDATE cliente SET nome_razao='Serviços Nacional do Comercio',email='contato@se
 SELECT * FROM auditoria_log;      
 SELECT * FROM cliente;               
        
-### Material (Diretório)    
-- aula_130326.pptx    
-- exemplos_mysql_basico_intermediario.pdf    
-- funcoes_mysql_1.docx     
-   
+### Lição de casa (Diretório)     
+- licao-de-casa.sql     
+- variaveis.sql      
+       
+### Material (Diretório)     
+- eletrocenter.sql      
+- 127_0_0_1.sql     
+    
 #### Recomandações    
 https://dev.mysql.com/doc      
 https://dev.mysql.com/doc/refman/8.0/en/triggers.html       
