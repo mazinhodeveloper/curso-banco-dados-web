@@ -1,0 +1,9 @@
+# 1. Instalar dependências
+npm install
+
+# 2. Configurar .env com dados do MySQL
+
+# 3. Criar banco e tabela (SQL acima)
+
+# 4. Rodar
+npm run dev

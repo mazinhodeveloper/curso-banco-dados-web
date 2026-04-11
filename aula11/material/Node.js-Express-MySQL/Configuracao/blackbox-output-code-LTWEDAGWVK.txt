@@ -1,0 +1,9 @@
+projeto-clientes/
+├── server.js
+├── package.json
+├── public/
+│   ├── index.html
+│   └── style.css
+├── routes/
+│   └── clientes.js
+└── database.js

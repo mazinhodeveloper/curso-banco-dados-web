@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="mb-0">
+                            <i class="bi bi-person-plus-fill me-2"></i>
+                            Cadastro de Cliente
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="formCliente" novalidate>
+                            <!-- Dados Pessoais -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <label for="nome_razao" class="form-label fw-bold">
+                                        <i class="bi bi-person-fill text-primary me-1"></i>Nome/Razão Social *
+                                    </label>
+                                    <input type="text" class="form-control form-control-lg" id="nome_razao" 
+                                           name="nome_razao" required maxlength="120">
+                                    <div class="invalid-feedback">
+                                        Nome/Razão Social é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="cpf_cnpj" class="form-label">
+                                        <i class="bi bi-card-text text-primary me-1"></i>CPF/CNPJ
+                                    </label>
+                                    <input type="text" class="form-control" id="cpf_cnpj" 
+                                           name="cpf_cnpj" maxlength="20">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">
+                                        <i class="bi bi-envelope-fill text-primary me-1"></i>Email
+                                    </label>
+                                    <input type="email" class="form-control" id="email" 
+                                           name="email" maxlength="100">
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="telefone" class="form-label">
+                                        <i class="bi bi-telephone-fill text-primary me-1"></i>Telefone
+                                    </label>
+                                    <input type="text" class="form-control" id="telefone" 
+                                           name="telefone" maxlength="20">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="celular" class="form-label fw-bold">
+                                        <i class="bi bi-phone-fill text-primary me-1"></i>Celular *
+                                    </label>
+                                    <input type="text" class="form-control" id="celular" 
+                                           name="celular" required maxlength="20">
+                                    <div class="invalid-feedback">
+                                        Celular é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Endereço -->
+                            <hr class="my-4">
+                            <h5 class="text-primary mb-3">
+                                <i class="bi bi-geo-alt-fill me-2"></i>Endereço
+                            </h5>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="cep" class="form-label fw-bold">
+                                        <i class="bi bi-envelope-check-fill text-primary me-1"></i>CEP *
+                                    </label>
+                                    <input type="text" class="form-control" id="cep" 
+                                           name="cep" maxlength="9" placeholder="00000-000" required>
+                                    <div class="invalid-feedback">
+                                        CEP é obrigatório.
+                                    </div>
+                                    <small class="text-muted">Digite o CEP e pressione TAB</small>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <label for="logradouro" class="form-label fw-bold">Logradouro *</label>
+                                    <input type="text" class="form-control" id="logradouro" 
+                                           name="logradouro" maxlength="20" required>
+                                    <div class="invalid-feedback">Logradouro é obrigatório.</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="numero" class="form-label fw-bold">Número *</label>
+                                    <input type="text" class="form-control" id="numero" 
+                                           name="numero" maxlength="20" required>
+                                    <div class="invalid-feedback">Número é obrigatório.</div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="complemento" class="form-label">Complemento *</label>
+                                    <input type="text" class="form-control" id="complemento" 
+                                           name="complemento" maxlength="20" required>
+                                    <div class="invalid-feedback">Complemento é obrigatório.</div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="bairro" class="form-label fw-bold">Bairro *</label>
+                                    <input type="text" class="form-control" id="bairro" 
+                                           name="bairro" maxlength="20" required>
+                                    <div class="invalid-feedback">Bairro é obrigatório.</div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="uf" class="form-label fw-bold">UF *</label>
+                                    <select class="form-select" id="uf" name="uf" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                                        <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                                        <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                                        <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                                        <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                                        <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                                        <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                                        <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                                        <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                                    </select>
+                                    <div class="invalid-feedback">UF é obrigatório.</div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-7">
+                                    <label for="cidade" class="form-label fw-bold">Cidade *</label>
+                                    <input type="text" class="form-control" id="cidade" 
+                                           name="cidade" maxlength="20" required>
+                                    <div class="invalid-feedback">Cidade é obrigatória.</div>
+                                </div>
+                            </div>
+
+                            <!-- Botões -->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" class="btn btn-secondary me-md-2" id="btnLimpar">
+                                    <i class="bi bi-arrow-clockwise me-1"></i>Limpar
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-lg" id="btnSalvar">
+                                    <i class="bi bi-check-circle-fill me-2"></i>Salvar Cliente
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery (para máscaras e validação) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- InputMask para máscaras -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Máscaras dos campos
+            $('#cpf_cnpj').mask('000.000.000-00||00.000.000/0000-00');
+            $('#telefone, #celular').mask('(00) 0000-0000|| (00) 00000-0000');
+            $('#cep').mask('00.000-000');
+            
+            // Função para buscar CEP
+            function buscarCEP(cep) {
+                const cepLimpo = cep.replace(/\D/g, '');
+                
+                if (cepLimpo.length !== 8) {
+                    return;
+                }
+
+                // Loading no campo CEP
+                $('#cep').addClass('is-loading');
+                
+                $.getJSON(`https://viacep.com.br/ws/${cepLimpo}/json/`, function(dados) {
+                    if (!dados.erro) {
+                        $('#logradouro').val(dados.logradouro);
+                        $('#bairro').val(dados.bairro);
+                        $('#cidade').val(dados.localidade);
+                        $('#uf').val(dados.uf);
+                        
+                        // Foco no número
+                        $('#numero').focus();
+                    } else {
+                        alert('CEP não encontrado! Preencha os dados manualmente.');
+                        limparEndereco();
+                    }
+                }).fail(function() {
+                    alert('Erro ao consultar CEP. Verifique sua conexão.');
+                }).always(function() {
+                    $('#cep').removeClass('is-loading');
+                });
+            }
+
+            // Evento do CEP (ao sair do campo)
+            $('#cep').on('blur', function() {
+                const cep = $(this).val();
+                if (cep && cep !== '___.___-___') {
+                    buscarCEP(cep);
+                }
+            });
+
+            // Validação do formulário
+            $('#formCliente').on('submit', function(e) {
+                e.preventDefault();
+                
+                if (this.checkValidity()) {
+                    const dadosCliente = {
+                        nome_razao: $('#nome_razao').val(),
+                        cpf_cnpj: $('#cpf_cnpj').val(),
+                        email: $('#email').val(),
+                        telefone: $('#telefone').val(),
+                        celular: $('#celular').val(),
+                        cep: $('#cep').val(),
+                        logradouro: $('#logradouro').val(),
+                        numero: $('#numero').val(),
+                        complemento: $('#complemento').val(),
+                        bairro: $('#bairro').val(),
+                        cidade: $('#cidade').val(),
+                        uf: $('#uf').val()
+                    };
+
+                    // Aqui você enviaria para o backend
+                    console.log('Dados do cliente:', dadosCliente);
+                    
+                    alert('Cliente salvo com sucesso! (Dados no console)');
+                    
+                    // Limpar formulário após salvar
+                    $('#formCliente')[0].reset();
+                } else {
+                    // Mostra validação Bootstrap
+                    $(this).addClass('was-validated');
+                }
+            });
+
+            // Botão limpar
+            $('#btnLimpar').click(function() {
+                $('#formCliente')[0].reset();
+                $('.is-invalid').removeClass('is-invalid');
+            });
+
+            // CSS para loading
+            const style = document.createElement('style');
+            style.textContent = `
+                .is-loading {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23999' fill-opacity='0.6' transform='translate(2 2)'%3e%3ccircle cx='18' cy='18' r='18'/%3e%3cpath d='M36 18c0-9.94-8.06-18-18-18'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+                    background-repeat: no-repeat;
+                    background-position: center right 12px;
+                    background-size: 20px;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

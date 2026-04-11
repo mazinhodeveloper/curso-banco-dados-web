@@ -1,0 +1,23 @@
+🚀 Como rodar:
+
+# 1. Instalar dependências
+npm install
+
+# 2. Configurar .env com dados do MySQL
+
+# 3. Criar banco e tabela (SQL acima)
+
+# 4. Rodar
+npm run dev
+
+
+Acesse: http://localhost:3000
+
+✅ API REST completa
+✅ Validação server-side
+✅ ViaCEP funcionando
+✅ MySQL Pool Connection
+✅ Loading e feedback visual
+✅ Tratamento completo de erros
+
+Tudo pronto e profissional! 🎉
