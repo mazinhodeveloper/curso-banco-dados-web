@@ -68,17 +68,19 @@ router.post('/',
     }
 );
 
-// GET /api/clientes - Listar clientes
+// GET /api/clientes - Listar clientes 
 router.get('/', (req, res) => {
     getConnection((err, connection) => {
         if (err) {
+            console.error('Connection error:', err);
             return res.status(500).json({ error: 'Erro no banco' });
         }
 
         connection.query('SELECT * FROM cliente ORDER BY id_cliente DESC', (err, results) => {
-            connection.release();
+            connection.release();  // Always release!
             if (err) {
-                return res.status(500).json({ error: 'Erro ao buscar clientes' });
+                console.error('Query error:', err);  // Log the real SQL error
+                return res.status(500).json({ error: 'Erro ao buscar clientes', details: err.message });
             }
             res.json({ success: true, clientes: results });
         });

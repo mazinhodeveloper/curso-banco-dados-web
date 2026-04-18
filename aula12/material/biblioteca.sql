@@ -1,0 +1,19 @@
+CREATE TABLE biblioteca;
+
+USE biblioteca;
+
+CREATE TABLE cliente (
+  id_cliente INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome_razao VARCHAR(120) NOT NULL,
+  cpf_cnpj VARCHAR(20) DEFAULT NULL,
+  email VARCHAR(100) DEFAULT NULL,
+  telefone VARCHAR(20) DEFAULT NULL,
+  celular VARCHAR(20) NOT NULL,
+  cep VARCHAR(9) NOT NULL,
+  logradouro VARCHAR(20) NOT NULL,
+  numero VARCHAR(20) NOT NULL,
+  complemento VARCHAR(20) NOT NULL,
+  bairro VARCHAR(20) NOT NULL,
+  cidade VARCHAR(20) NOT NULL,
+  uf VARCHAR(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
