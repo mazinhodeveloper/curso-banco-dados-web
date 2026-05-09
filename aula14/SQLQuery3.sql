@@ -1,16 +1,16 @@
-USE BibliotecaDB; 
+USE BibliotecaDB;        
 
 INSERT INTO Categorias 
-	nome_categoria
+	(nome_categoria) 
 VALUES 
 	('Tecnologia'),
 	('Romance'),
-	('Administra��o'),
-	('Hist�ria');    
+	('Administração'),
+	('História');    
 SELECT * FROM Categorias; 
 
 INSERT INTO Editoras 
-	(nome_editora, telefone)
+	(nome_editora, telefone) 
 VALUES 
 	('Novatec', '1111-1111'),
 	('Alta Books', '2222-2222');    
@@ -50,14 +50,20 @@ VALUES
 /*INSERT INTO Usuarios 
 	(nome, cpf, telefone, email) 
 VALUES  
-	('Z� Ramalho', '222.222.222-22', '9999-7777', 'zeramalho@hotmail.com'); */
+	('Zé Ramalho', '222.222.222-22', '9999-7777', 'zeramalho@hotmail.com'); */ 
 SELECT * FROM Usuarios; 
 
 INSERT INTO Funcionarios 
 	(nome_funcionario, cargo) 
 VALUES 
-	('Jo�o Bisbilhoteiro', 'Bibliotec�rio'), 
+	('João Bisbilhoteiro', 'Bibliotecário'), 
 	('Ana Maria Lima', 'Atendente'); 
 SELECT * FROM Funcionarios;      
 
+INSERT INTO Emprestimos 
+	(id_usuario, id_funcionario, id_livro)
+VALUES 
+    (1, 1, 1),  -- Carlos Silva borrows Clean Code
+    (2, 2, 2);  -- Maria Souza borrows Dom Casmurro
+SELECT * FROM Emprestimos;     
 

@@ -42,6 +42,10 @@ Sistema de Biblioteca, vamos usando:
 SQLQuery1.sql                
 SQLQuery2.sql                
 SQLQuery3.sql                
+SQLQuery4.sql                              
+             
+### Material (Diretório)    
+- SAAS.pptx               
              
 #### Recomandações      
 https://www.microsoft.com/en-us/sql-server/sql-server-downloads                
