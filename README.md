@@ -32,11 +32,15 @@ https://github.com/mazinhodeveloper/curso-banco-dados-web
 | PHP 8.5 ou maior           | https://www.php.net           |   
 | XAMPP                      | https://www.apachefriends.org |   
 | Docker                     | https://www.docker.com        |   
-| Docker PHP 8.5 Apache      | docker run -d -p 80:80 --name apache-php85-app -v "$PWD":/var/www/html php:8.5-apache |   
-| Docker MySQL               | docker run -d --name some-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql:tag |   
+| Docker PHP 8.5 Apache      | docker run -d --name apache-php85-app -v "$PWD":/var/www/html -p 80:80 php:8.5-apache |   
+| Docker Node.js 20          | docker run -d --name node-app -v "$PWD":/usr/src/app -w /usr/src/app -p 3000:3000 node:20 npx nodemon index.js |    
+| Docker MySQL               | docker run -d --name some-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Strong!Passw0rd mysql:tag |     
+| Docker MSSQL               | docker run -d --name some-mssql -e ACCEPT_EULA=Y -e SA_PASSWORD=Strong!Passw0rd -v "$PWD/mssql-data":/var/opt/mssql -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest |    
 
 
-### Rodando o Projeto 
-| Diretório             | URL                   |  
-|---------------------- |---------------------- |  
-| Local                 | http://localhost      |      
+### Rodando o Projeto        
+| Diretório                    | URL                        |         
+|----------------------------- |--------------------------- |        
+| Localhost:80 PHP             | http://localhost:80        |       
+| Localhost:3000 Node.JS       | http://localhost:3000      |        
+            
