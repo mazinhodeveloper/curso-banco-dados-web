@@ -1,0 +1,7 @@
+{
+  "descricao": "Internet",
+  "Tipo": "Despesas", 
+  "Valor": 120,
+  "Categoria": "Serviços", 
+  "Data": "2026/06/13" 
+}

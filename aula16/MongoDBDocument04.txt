@@ -1,0 +1,11 @@
+{
+  "Nome": "Hugo Souza", 
+  "Cargo": "Suporte Técnico", 
+  "Departamento": "TI", 
+  "Data_adm": "2025-11-28",
+  "Data_nascimento": "1989-12-22",
+  "Cpf": "443.244.1454-43",
+  "Email": "hugo@gmail.com",
+  "Telefone": "(11) 34343-4444",
+  "Salario": 8000
+}

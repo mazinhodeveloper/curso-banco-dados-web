@@ -1,0 +1,7 @@
+{
+  "descricao": "Supermecado",
+  "Tipo": "Despesas", 
+  "Valor": 350,
+  "Categoria": "Alimentação", 
+  "Data": "2026/06/13" 
+}

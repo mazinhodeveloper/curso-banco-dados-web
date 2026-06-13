@@ -1,0 +1,7 @@
+{
+  "descricao": "Trabalho Freelance",
+  "Tipo": "Receita", 
+  "Valor": 800,
+  "Categoria": "Extra", 
+  "Data": "2026/06/12" 
+}

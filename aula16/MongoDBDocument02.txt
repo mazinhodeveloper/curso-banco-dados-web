@@ -1,0 +1,11 @@
+{
+  "Nome": "Maria Leopoldina", 
+  "Cargo": "CEO", 
+  "Departamento": "Diretoria", 
+  "Data_adm": "2020-01-15",
+  "Data_nascimento": "1970-04-15",
+  "Cpf": "222.223.111-11",
+  "Email": "maria@hotmail.com",
+  "Telefone": "(11) 33333-2222",
+  "Salario": 10000
+}
