@@ -1,7 +1,7 @@
 USE BibliotecaDB;    
 
 /* PROCEDURE 
-Procedure para realizar empréstimo  */       
+Procedure para realizar emprï¿½stimo  */       
 CREATE PROCEDURE sp_realizar_emprestimo 
 ( 
     @id_usuario INT, 
@@ -38,8 +38,8 @@ WHERE name = 'sp_realizar_emprestimo';
 
 
 /* Executar Procedure - Exemplo */    
---EXEC sp_realizar_emprestimo 
---1, 1, 1, '2025-06-30'; 
+EXEC sp_realizar_emprestimo 
+1, 1, 1, '2025-06-30'; 
 
 /* Executar Procedure */  
 EXEC sp_realizar_emprestimo 
@@ -51,5 +51,5 @@ SELECT name, type_desc, create_date
 FROM sys.procedures      
 WHERE name = 'sp_realizar_emprestimo';     
 
-/* Seleciona o Código Fonte da Procedure  */    
+/* Seleciona o Cï¿½digo Fonte da Procedure  */    
 SELECT OBJECT_DEFINITION(OBJECT_ID('sp_realizar_emprestimo')) AS ProcedureCode; 

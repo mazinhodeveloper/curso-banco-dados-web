@@ -1,7 +1,7 @@
 USE BibliotecaDB;   
 
 /* FUNCTION  
-Função para calcular dias de atraso  */    
+Funï¿½ï¿½o para calcular dias de atraso  */    
 CREATE FUNCTION fn_calcular_atraso 
 ( 
     @data_prevista DATE, 

@@ -1,7 +1,7 @@
 USE BibliotecaDB;  
 
---ALTER TABLE Emprestimos 
---ADD data_prevista DATE;   
+ALTER TABLE Emprestimos 
+ADD data_prevista DATE;   
 SELECT * FROM Emprestimos;      
 
 INSERT INTO Emprestimos 
@@ -10,14 +10,13 @@ VALUES
 	(1,1,1, '2026-05-26', 'Emprestado'); 
 SELECT * FROM Emprestimos;      
 
-/*SELECT 
+SELECT 
 * 
 FROM Emprestimos E 
 INNER JOIN Usuarios U 
 	ON E.id_usuario = U.id_usuario 
 INNER JOIN Livros L 
 	ON E.id_livro = L.id_livro; 
-*/    
 
 SELECT 
 	U.nome AS usuario, 
@@ -31,7 +30,6 @@ INNER JOIN Livros L
 	ON E.id_livro = L.id_livro; 
 
 /* LISTAR LIVROS COM CATEGORIA E EDITORA */   
-/*
 SELECT 
     L.titulo, 
 	C.nome_categoria, 
@@ -41,7 +39,6 @@ INNER JOIN Categorias AS C
     ON L.id_categoria = C.id_categoria
 INNER JOIN Editoras AS E
     ON L.id_categoria = L.id_editora;  
-*/  
 
 /* Listar livros e autores */  
 SELECT 
@@ -62,7 +59,7 @@ INNER JOIN Categorias C
     ON L.id_categoria = C.id_categoria 
 GROUP BY C.nome_categoria; 
 
-/* Quantidade de empréstimos por usuário */ 
+/* Quantidade de emprï¿½stimos por usuï¿½rio */ 
 SELECT 
     U.nome, 
     COUNT(*) AS total_emprestimos 
@@ -72,7 +69,7 @@ INNER JOIN Usuarios U
 GROUP BY U.nome; 
 
 /* VIEW 
-Criar uma view de empréstimos completos */ 
+Criar uma view de emprï¿½stimos completos */ 
 CREATE VIEW vw_emprestimos 
 AS 
 SELECT 

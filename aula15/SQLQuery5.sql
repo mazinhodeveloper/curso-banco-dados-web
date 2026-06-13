@@ -1,7 +1,7 @@
 USE BibliotecaDB;      
 
 /* TRIGGER 
-Trigger para devolução 
+Trigger para devoluï¿½ï¿½o 
 Quando o livro for devolvido: 
 Atualiza o status 
 Atualiza estoque 
@@ -42,10 +42,13 @@ BEGIN
 END; 
 
 /* Teste da Trigger 
-Registrar devolução */      
+Registrar devoluï¿½ï¿½o */      
 UPDATE Emprestimos    
-SET data_devolucao = '2025-07-10'    
-WHERE id_emprestimo = 1;    
+SET data_devolucao = '2025-07-10' -- '2025-06-30'     
+WHERE id_emprestimo = 1;   
+
+/* Seleciona toda tabela */ 
+SELECT * FROM Emprestimos; 
 
 
 
