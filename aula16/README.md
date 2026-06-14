@@ -26,13 +26,7 @@ https://github.com/mazinhodeveloper/curso-banco-dados-web
 | Local / PHPMyAdmin         | http://localhost/phpmyadmin   |      
 | Docker MSSQL               | docker run -d --name some-mssql -e ACCEPT_EULA=Y -e SA_PASSWORD=Strong!Passw0rd -v "$PWD/mssql-data":/var/opt/mssql -p 1433:1433 mcr.microsoft.com/mssql/server:2022-latest |       
 | DBeaver Community          | https://dbeaver.io            |             
-| Docker MongoDB             | docker run -d \
-  --name some-mongodb \
-  -e MONGO_INITDB_ROOT_USERNAME=admin \
-  -e MONGO_INITDB_ROOT_PASSWORD=StrongMongoPass \
-  -v "$PWD/mongo-data":/data/db \
-  -p 27017:27017 \
-  mongo:latest |            
+| Docker MongoDB             | docker run -d --name some-mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=StrongMongoPass -v "$PWD/mongo-data":/data/db -p 27017:27017 mongo:latest |            
 
 ### Atividades       
 Banco de Dados NoSQL          
