@@ -1,0 +1,16 @@
+### MongoDB Compass       
+- URL: mongodb://localhost:27017          
+- Name: recursos_humanos                        
+- Database Name: recursos_humanos               
+- Collection Name: folha_pagamento        
+- MongoDBDocument0x.txt          
+
+{
+  "id_funcionario": "6a2d5bee061a0b4a820d9be8",
+  "mes": "06/2026",
+  "salario_bruto": 3000,
+  "inss": 100,
+  "irpf": 0, 
+  "salario_liquido": 2900
+}             
+        
