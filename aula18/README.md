@@ -61,14 +61,12 @@ $nin = Não está na lista
 }              
                                              
 ### Arquivos        
-MongoDBDocument01.txt             
-MongoDBDocument02.txt                   
-AtividadePadaria01-BancoDeDados.sql                  
-AtividadePadaria02-InserirDados.sql                          
-AtividadePadaria03-SelecionarDados.sql            
-AtividadePadaria04-InserirDados.sql              
-AtividadePadaria05-SelecionarDados.sql               
-AtividadePadaria06-Update.sql          
+AtividadePadaria01-SelecionarDados.sql           
+mongodb.docx             
+MongoDB.pptx                   
+MongoDBDocument01.txt          
+padaria_vila_romana_nivel_senac.pdf               
+padaria_vila_romana.sql          
            
 ### Atividade MySQL              
 > Padaria Vila Romana                
